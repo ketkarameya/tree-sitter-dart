@@ -347,7 +347,7 @@ module.exports = grammar({
                     $._template_chars_double_single,
                     '\'',
                     $.escape_sequence,
-                    $._sub_string_test,
+                    $.string_fragment,
                     $.template_substitution
                 )
             ),
@@ -359,7 +359,7 @@ module.exports = grammar({
                 $._template_chars_single_single,
                 '"',
                 $.escape_sequence,
-                $._sub_string_test,
+                $.string_fragment,
                 $.template_substitution
             )),
             '\''
@@ -372,7 +372,7 @@ module.exports = grammar({
                     '\'',
                     '\"',
                     $.escape_sequence,
-                    $._sub_string_test,
+                    $.string_fragment,
                     $.template_substitution
                 )),
                 '"""'
@@ -386,7 +386,7 @@ module.exports = grammar({
                     '"',
                     '\'',
                     $.escape_sequence,
-                    $._sub_string_test,
+                    $.string_fragment,
                     $.template_substitution
                 )),
                 '\'\'\''
@@ -401,7 +401,7 @@ module.exports = grammar({
                 $._template_chars_raw_slash,
                 // '\\',
                 $._unused_escape_sequence,
-                $._sub_string_test,
+                $.string_fragment,
                 '$'
             )),
             '"'
@@ -415,7 +415,7 @@ module.exports = grammar({
                 $._template_chars_raw_slash,
                 // '\\',
                 $._unused_escape_sequence,
-                $._sub_string_test,
+                $.string_fragment,
                 '$'
             )),
             '\''
@@ -431,7 +431,7 @@ module.exports = grammar({
                     $._template_chars_raw_slash,
                     '"',
                     $._unused_escape_sequence,
-                    $._sub_string_test,
+                    $.string_fragment,
                     '$'
                 )),
                 '"""'
@@ -449,7 +449,7 @@ module.exports = grammar({
                     // '\\',
                     $._template_chars_raw_slash,
                     $._unused_escape_sequence,
-                    $._sub_string_test,
+                    $.string_fragment,
                     '$'
                 )),
                 '\'\'\''
@@ -467,7 +467,7 @@ module.exports = grammar({
                 $.identifier_dollar_escaped
             )
         ),
-        _sub_string_test: $ => seq('$', /[^a-zA-Z_{]/),
+        string_fragment: $ => seq('$', /[^a-zA-Z_{]/),
         _string_interp: $ => /\$((\w+)|\{([^{}]+)\})/, // represents $word or ${word} for now
         _unused_escape_sequence: $ => token.immediate(seq(
             '\\',

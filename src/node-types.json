@@ -12313,6 +12313,11 @@
     }
   },
   {
+    "type": "string_fragment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "string_literal",
     "named": true,
     "fields": {},
@@ -12322,6 +12327,10 @@
       "types": [
         {
           "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "string_fragment",
           "named": true
         },
         {

@@ -1084,7 +1084,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_sub_string_test"
+                "name": "string_fragment"
               },
               {
                 "type": "SYMBOL",
@@ -1125,7 +1125,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_sub_string_test"
+                "name": "string_fragment"
               },
               {
                 "type": "SYMBOL",
@@ -1173,7 +1173,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_sub_string_test"
+                  "name": "string_fragment"
                 },
                 {
                   "type": "SYMBOL",
@@ -1222,7 +1222,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_sub_string_test"
+                  "name": "string_fragment"
                 },
                 {
                   "type": "SYMBOL",
@@ -1268,7 +1268,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_sub_string_test"
+                "name": "string_fragment"
               },
               {
                 "type": "STRING",
@@ -1313,7 +1313,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_sub_string_test"
+                "name": "string_fragment"
               },
               {
                 "type": "STRING",
@@ -1365,7 +1365,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_sub_string_test"
+                  "name": "string_fragment"
                 },
                 {
                   "type": "STRING",
@@ -1418,7 +1418,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_sub_string_test"
+                  "name": "string_fragment"
                 },
                 {
                   "type": "STRING",
@@ -1483,7 +1483,7 @@
         }
       ]
     },
-    "_sub_string_test": {
+    "string_fragment": {
       "type": "SEQ",
       "members": [
         {
@@ -12457,3 +12457,4 @@
     "_literal"
   ]
 }
+
